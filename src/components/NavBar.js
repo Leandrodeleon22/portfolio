@@ -19,7 +19,11 @@ const NavBar = () => {
         <ul className=" w-5/12 text-[1.9rem] flex justify-between uppercase">
           {links.map((link) => {
             return (
-              <Link key={link.id} href={link.href}>
+              <Link
+                className="hover:text-[var(--neon-green-color)]"
+                key={link.id}
+                href={link.href}
+              >
                 {link.name}
               </Link>
             );
