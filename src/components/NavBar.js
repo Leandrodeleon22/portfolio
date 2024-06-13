@@ -1,5 +1,5 @@
 import React from "react";
-import Wrapper from "./Wrapper";
+
 import Image from "next/image";
 import Logo from "@/assets/DESKTOP/desktop-logo-01 1.png";
 import Link from "next/link";
@@ -13,10 +13,10 @@ const links = [
 
 const NavBar = () => {
   return (
-    <Wrapper>
-      <nav className=" flex justify-between items-center mt-[1rem]">
+    <div className="flex justify-between items-center mt-[1rem] bg-[var(--background-color)] w-full">
+      <div className="w-3/4 mx-auto flex justify-between items-center">
         <Image src={Logo} width={190} height={82} alt="Logo" />
-        <ul className=" w-5/12 text-[1.9rem] flex justify-between uppercase">
+        <ul className=" w-5/12 text-[1.9rem] flex justify-between uppercase items-center">
           {links.map((link) => {
             return (
               <Link
@@ -29,8 +29,8 @@ const NavBar = () => {
             );
           })}
         </ul>
-      </nav>
-    </Wrapper>
+      </div>
+    </div>
   );
 };
 
