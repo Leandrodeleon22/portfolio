@@ -26,6 +26,7 @@ html {
 body {
   color: var(--white-gray-color);
   background-color: var(--background-color);
+  /* background: #070707; */
 }
 
 .bg-custom {

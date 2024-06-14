@@ -13,7 +13,7 @@ const links = [
 
 const NavBar = () => {
   return (
-    <div className="flex justify-between items-center mt-[1rem] bg-[var(--background-color)] w-full">
+    <div className="fixed z-50 flex justify-between items-center py-1  bg-[var(--background-color)] w-full">
       <div className="w-3/4 mx-auto flex justify-between items-center">
         <Image src={Logo} width={190} height={82} alt="Logo" />
         <ul className=" w-5/12 text-[1.9rem] flex justify-between uppercase items-center">

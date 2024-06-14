@@ -32,7 +32,7 @@ const icons = [
 const About = () => {
   return (
     <Wrapper>
-      <section className="mt-[10rem] font-extralight" id="about">
+      <section className="mt-[10rem] font-extralight pt-[7rem]" id="about">
         <h1 className="text-[4.2rem]  text-[var(--neon-green-color)]">
           About Me
         </h1>

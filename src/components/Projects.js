@@ -17,7 +17,7 @@ const projects = [
     description:
       "A simple app that allows you to search for the flag of each country.",
     link: "https://countries-azure-pi.vercel.app/",
-    tools: ["NextJS", "Prisma", "Posgresql", "Tailwind-css"],
+    tools: ["NextJS", "Prisma-Posgres", "Tailwind", "Typescript"],
   },
   {
     id: 2,
@@ -64,16 +64,16 @@ const projects = [
 const Projects = () => {
   return (
     <Wrapper>
-      <section id="projects" className="font-extralight">
+      <section id="projects" className="font-extralight pt-[7rem]">
         <h1 className="text-[4.2rem]  text-[var(--neon-green-color)]">
           Projects
         </h1>
-        <div className="grid grid-cols-3 justify-items-center item gap-7 my-[2.5rem]">
+        <div className="grid grid-cols-3 justify-items-center item gap-9 my-[2.5rem]">
           {projects.map((project) => {
             return (
               <Link
                 href={project.link}
-                className="flex flex-col bg-gradient-to-t from-[var(--neon-green-border)] to-[var(--top-gradient)] to-60% items-center p-8 border-solid border-[var(--neon-green-color)] border-[.15rem] w-full rounded-2xl hover:drop-shadow-[0_10px_20px_rgba(6,66,12,1)] hover:scale-[1.02] transition hover:ease-in"
+                className="flex flex-col justify-between bg-gradient-to-t from-[var(--neon-green-border)] to-[var(--top-gradient)] to-60% items-center p-8 border-solid border-[var(--neon-green-color)] border-[.15rem] w-full rounded-2xl hover:drop-shadow-[0_10px_20px_rgba(6,66,12,1)] hover:scale-[1.02] transition hover:ease-in"
                 key={project.id}
                 target="_blank"
               >
@@ -92,7 +92,7 @@ const Projects = () => {
                 <button className="bg-[#1ED430] w-3/4 h-[5rem] rounded-2xl text-[2.5rem] font-normal my-8 hover:bg-[#26B634]">
                   View Live
                 </button>
-                <div className="flex w-full justify-around px-8 italic font-normal text-[1.3rem]">
+                <div className="flex w-full justify-around px-2 italic font-normal text-[1.4rem]">
                   {project.tools.map((tool) => {
                     return <span key={tool}>{tool}</span>;
                   })}
