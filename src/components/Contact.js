@@ -48,7 +48,7 @@ const Contact = () => {
               />
             </div>
 
-            <div className="w-full col-span-full">
+            <div className="w-full col-span-full mb-10">
               <label htmlFor="subject" className="block text-[2.5rem] mb-3">
                 Subject
               </label>
@@ -64,9 +64,14 @@ const Contact = () => {
               id="message"
               cols="100"
               rows="10"
-              className="w-full col-span-full text-[var(--background-color)] text-[2rem] font-normal px-5 h-[30rem]"
+              className="w-full col-span-full text-[var(--background-color)] text-[2rem] font-normal p-5 h-[30rem]"
               placeholder="Your message"
             ></textarea>
+          </div>
+          <div className="w-full flex justify-center mt-14 ">
+            <button className="bg-[var(--neon-green-color)]  rounded-lg text-[2.5rem] font-normal py-2 px-20">
+              SEND
+            </button>
           </div>
         </form>
       </div>
