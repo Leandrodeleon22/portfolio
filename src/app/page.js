@@ -1,5 +1,6 @@
 import About from "@/components/About";
 import Contact from "@/components/Contact";
+import Dialog from "@/components/Dialog";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Projects from "@/components/Projects";
@@ -7,6 +8,7 @@ import Projects from "@/components/Projects";
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center">
+      <Dialog />
       <Header />
       <About />
       <Projects />

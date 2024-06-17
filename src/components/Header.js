@@ -8,7 +8,7 @@ const Header = () => {
     <>
       <NavBar />
       <Wrapper>
-        <div className=" text-[9.9rem] font-extralight" id="#home">
+        <div className=" text-[9.9rem] font-extralight" id="home">
           <div className="min-h-screen flex items-center">
             <div className="mt-[-11rem] text-[9.9rem] font-extralight">
               <p className=" m-0">Web Developer</p>

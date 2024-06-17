@@ -83,7 +83,7 @@ const Projects = () => {
                   width={281}
                   alt={project.name}
                 />
-                <h1 className="text-[2.5rem] font-normal my-3">
+                <h1 className="text-[2.5rem] font-normal my-3 text-center">
                   {project.name}
                 </h1>
                 <p className="font-normal text-[1.6rem] text-center ">
