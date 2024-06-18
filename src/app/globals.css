@@ -49,3 +49,31 @@ body {
   align-items: end; */
   @apply flex flex-col items-end;
 }
+
+@keyframes scaleBackground {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(100%);
+  }
+}
+
+@keyframes hideBackground {
+  0% {
+    transform: scaleY(100%);
+  }
+  100% {
+    transform: scaleY(0);
+  }
+}
+
+.background-scale {
+  animation: scaleBackground 0.25s ease-in-out forwards;
+  transform-origin: top;
+}
+
+.hideBackground-scale {
+  animation: hideBackground 0.25s ease-in-out forwards;
+  transform-origin: top;
+}

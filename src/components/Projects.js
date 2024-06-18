@@ -92,7 +92,7 @@ const Projects = () => {
                 <button className="bg-[#1ED430] w-3/4 h-[5rem] rounded-2xl text-[2.5rem] font-normal my-8 hover:bg-[#26B634]">
                   View Live
                 </button>
-                <div className="flex w-full justify-around px-2 italic font-normal text-[1.4rem]">
+                <div className="flex w-full justify-around px-2 italic font-normal text-[1.4rem] flex-wrap">
                   {project.tools.map((tool) => {
                     return <span key={tool}>{tool}</span>;
                   })}
