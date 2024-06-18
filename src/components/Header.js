@@ -2,10 +2,13 @@ import Image from "next/image";
 import NavBar from "./NavBar";
 import bgImage from "@/assets/DESKTOP/desktop-bg-portfolio 1.png";
 import Wrapper from "./Wrapper";
+import MobileNavBar from "./MobileNavBar";
 
 const Header = () => {
   return (
     <>
+      {<MobileNavBar />}
+
       <NavBar />
       <Wrapper>
         <div className=" text-[9.9rem] font-extralight" id="home">
