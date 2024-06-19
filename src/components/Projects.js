@@ -65,15 +65,15 @@ const Projects = () => {
   return (
     <Wrapper>
       <section id="projects" className="font-extralight pt-[7rem]">
-        <h1 className="text-[4.2rem]  text-[var(--neon-green-color)]">
+        <h1 className="text-[4.2rem]  text-[var(--neon-green-color)] max-[500px]:text-center">
           Projects
         </h1>
-        <div className="grid grid-cols-3 justify-items-center item gap-9 my-[2.5rem]">
+        <div className="grid grid-cols-3 justify-items-center item gap-9 my-[2.5rem] max-[830px]:grid-cols-1">
           {projects.map((project) => {
             return (
               <Link
                 href={project.link}
-                className="flex flex-col justify-between bg-gradient-to-t from-[var(--neon-green-border)] to-[var(--top-gradient)] to-60% items-center p-8 border-solid border-[var(--neon-green-color)] border-[.15rem] w-full rounded-2xl hover:drop-shadow-[0_10px_20px_rgba(6,66,12,1)] hover:scale-[1.02] transition hover:ease-in"
+                className="flex flex-col py-[5rem] justify-between bg-gradient-to-t from-[var(--neon-green-border)] to-[var(--top-gradient)] to-60% items-center p-8 border-solid border-[var(--neon-green-color)] border-[.15rem] w-full rounded-2xl hover:drop-shadow-[0_10px_20px_rgba(6,66,12,1)] hover:scale-[1.02] transition hover:ease-in"
                 key={project.id}
                 target="_blank"
               >

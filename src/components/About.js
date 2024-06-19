@@ -33,19 +33,19 @@ const About = () => {
   return (
     <Wrapper>
       <section className="mt-[10rem] font-extralight pt-[7rem]" id="about">
-        <h1 className="text-[4.2rem]  text-[var(--neon-green-color)]">
+        <h1 className="text-[4.2rem]  text-[var(--neon-green-color)] max-[630px]:text-center max-[500px]:text-[2.5rem]">
           About Me
         </h1>
-        <p className="text-[2.4rem] leading-[3.5rem] w-11/12 mt-[2.5rem]">
+        <p className="text-[2.4rem] leading-[3.5rem] w-11/12 mt-[2.5rem] max-[630px]:text-center max-[500px]:text-[1.5rem] max-[500px]:leading-[2.75rem]">
           Hi! I’m a Web Developer with professional experience in graphic
           design. I enjoy combining my skills in problem solving and design to
           create different types of web apps. I also have experience in backend
           development, relational database and non-relational database.
         </p>
-        <h2 className="font-extralight text-[2.3rem] italic my-[3rem] ">
+        <h2 className="font-extralight text-[2.3rem] italic my-[3rem] max-[630px]:text-center ">
           Core toolkit that I use:
         </h2>
-        <div className=" grid grid-cols-6 gap-y-[4rem] mt-[6rem] justify-items-center mb-[10rem]">
+        <div className=" grid grid-cols-6 gap-y-[4rem] mt-[6rem] justify-items-center mb-[10rem] max-[630px]:grid-cols-3 max-[630px]:gap-5">
           {icons.map((icon) => {
             return (
               <div
@@ -57,9 +57,10 @@ const About = () => {
                   width={67}
                   height={67}
                   alt={icon.name}
-                  className="mb-4"
+                  className="mb-4 h-[5rem] w-[5rem]"
                 />
-                <span>{icon.name}</span>
+
+                <span className="max-[500px]:text-[1.3rem]">{icon.name}</span>
               </div>
             );
           })}

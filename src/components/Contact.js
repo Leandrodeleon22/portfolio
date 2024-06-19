@@ -59,17 +59,20 @@ const Contact = () => {
   return (
     <Wrapper>
       <div className="font-extralight my-[15rem] pt-[7rem]" id="contact">
-        <h1 className="text-[4.2rem]  text-[var(--neon-green-color)] ">
+        <h1 className="text-[4.2rem]  text-[var(--neon-green-color)] max-[500px]:text-[2.5rem] max-[500px]:text-center ">
           Get in touch
         </h1>
-        <p className="text-[2.4rem] font-extralight w-full text-center my-[2rem]">
+        <p className="text-[2.4rem] font-extralight w-full text-center my-[2rem] max-[500px]:text-[1.5rem]">
           Feel free to reach out, whether you have a question, feedback or just
           want to say hello.
         </p>
         <form ref={ref} onSubmit={handleSubmit}>
-          <div className="grid grid-cols-2 gap-6 w-3/4 mx-auto mt-16 ">
+          <div className="grid grid-cols-2 gap-6 w-3/4 mx-auto mt-16 max-[630px]:grid-cols-1 max-[630px]:w-full ">
             <div className="w-full ">
-              <label htmlFor="firstname" className="block text-[2.5rem] mb-3">
+              <label
+                htmlFor="firstname"
+                className="block text-[2.5rem] mb-3 max-[500px]:text-[1.5rem] "
+              >
                 Firstname
               </label>
               <input
