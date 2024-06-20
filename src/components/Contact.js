@@ -10,7 +10,6 @@ const Contact = () => {
   const ref = useRef(null);
   const pathName = usePathname();
   const { push } = useRouter();
-  console.log(pathName);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -41,9 +40,6 @@ const Contact = () => {
       to_name: "Leandro De Leon",
       message: data.message,
     };
-    // console.log(templateParams);
-
-    // await emailjs.send(serviceId, templateId, templateParams, publicKey);
 
     try {
       push(`${pathName}?showDialog=y#contact`);
@@ -59,20 +55,17 @@ const Contact = () => {
   return (
     <Wrapper>
       <div className="font-extralight my-[15rem] pt-[7rem]" id="contact">
-        <h1 className="text-[4.2rem]  text-[var(--neon-green-color)] max-[500px]:text-[2.5rem] max-[500px]:text-center ">
+        <h1 className="text-[4.2rem]  text-[var(--neon-green-color)]  max-[500px]:text-center ">
           Get in touch
         </h1>
-        <p className="text-[2.4rem] font-extralight w-full text-center my-[2rem] max-[500px]:text-[1.5rem]">
+        <p className="text-[2.4rem] font-extralight w-full text-center my-[2rem] max-[500px]:text-[2rem]">
           Feel free to reach out, whether you have a question, feedback or just
           want to say hello.
         </p>
         <form ref={ref} onSubmit={handleSubmit}>
           <div className="grid grid-cols-2 gap-6 w-3/4 mx-auto mt-16 max-[630px]:grid-cols-1 max-[630px]:w-full ">
             <div className="w-full ">
-              <label
-                htmlFor="firstname"
-                className="block text-[2.5rem] mb-3 max-[500px]:text-[1.5rem] "
-              >
+              <label htmlFor="firstname" className="block text-[2.5rem] ">
                 Firstname
               </label>
               <input
@@ -85,7 +78,7 @@ const Contact = () => {
             </div>
 
             <div className="w-full ">
-              <label htmlFor="lastname" className="block text-[2.5rem] mb-3">
+              <label htmlFor="lastname" className="block text-[2.5rem]">
                 Lastname
               </label>
               <input
@@ -135,7 +128,7 @@ const Contact = () => {
           <div className="w-full flex justify-center mt-14 ">
             <button
               type="submit"
-              className="bg-[var(--neon-green-color)]  rounded-lg text-[2.5rem] font-normal py-2 px-20 transition hover:ease-in-out hover:scale-[1.05]  hover:bg-green-500"
+              className="bg-[var(--neon-green-color)] font-semibold rounded-lg text-[2.5rem] py-2 px-20 transition hover:ease-in-out hover:scale-[1.05]  hover:bg-green-500 max-[440px]:w-full"
             >
               SEND
             </button>

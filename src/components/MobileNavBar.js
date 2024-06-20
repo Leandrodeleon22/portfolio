@@ -9,20 +9,17 @@ import { useStore } from "@/lib/store";
 const MobileNavBar = () => {
   const { showMobileNav, hideMobileNavFunc } = useStore();
   const handleClick = () => {
-    console.log("test");
     hideMobileNavFunc(false);
   };
 
-  console.log(showMobileNav);
-
-  // if (!showMobileNav) {
-  //   return null;
-  // }
-
   return (
     <div
-      className={`z-[1000] bg-slate-100 fixed h-full w-full  max-[943px]:flex justify-center items-center transition duration-500 ${
-        showMobileNav ? "background-scale" : "hideBackground-scale"
+      className={`z-[1000] bg-slate-100 fixed h-full w-full scale-y-0  max-[943px]:flex justify-center items-center transition duration-500 ${
+        showMobileNav === null
+          ? ""
+          : showMobileNav
+          ? "background-scale"
+          : "hideBackground-scale"
       }`}
     >
       <div className="w-5/6 flex items-center flex-col ">

@@ -33,10 +33,10 @@ const About = () => {
   return (
     <Wrapper>
       <section className="mt-[10rem] font-extralight pt-[7rem]" id="about">
-        <h1 className="text-[4.2rem]  text-[var(--neon-green-color)] max-[630px]:text-center max-[500px]:text-[2.5rem]">
+        <h1 className="text-[4.2rem]  text-[var(--neon-green-color)] max-[630px]:text-center ">
           About Me
         </h1>
-        <p className="text-[2.4rem] leading-[3.5rem] w-11/12 mt-[2.5rem] max-[630px]:text-center max-[500px]:text-[1.5rem] max-[500px]:leading-[2.75rem]">
+        <p className="text-[2.4rem] leading-[3.5rem] w-11/12 mt-[2.5rem] max-[630px]:text-center max-[500px]:text-[2rem] max-[500px]:leading-[3.5rem]">
           Hi! I’m a Web Developer with professional experience in graphic
           design. I enjoy combining my skills in problem solving and design to
           create different types of web apps. I also have experience in backend

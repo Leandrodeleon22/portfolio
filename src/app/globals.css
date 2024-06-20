@@ -36,6 +36,12 @@ body {
   background-repeat: no-repeat;
 }
 
+@media (max-width: 670px) {
+  .bg-custom {
+    background-image: url("../assets/MOBILE/mobile-bg.png");
+  }
+}
+
 .icon:nth-child(6) {
   /* display: flex;
   flex-direction: column;

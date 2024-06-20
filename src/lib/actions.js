@@ -18,8 +18,6 @@ export const sendEmail = async (formData) => {
     message: data.message,
   };
 
-  console.log(templateParams);
-
   await emailjs.send(
     process.env.SEND_EMAIL_SERVICE_ID,
     process.env.SEND_EMAIL_TEMPLATE_ID,

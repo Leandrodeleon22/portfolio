@@ -20,7 +20,6 @@ const NavBar = () => {
     hideMobileNavFunc(true);
   };
 
-  console.log(showMobileNav);
   return (
     <div className="fixed z-50 flex justify-between items-center py-1  bg-[var(--background-color)] w-full">
       <div className="w-3/4 mx-auto flex justify-between items-center max-[1085px]:w-5/6">
