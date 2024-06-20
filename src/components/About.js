@@ -6,7 +6,7 @@ import reactImg from "@/assets/DESKTOP/desktop-react.png";
 import nodeImg from "@/assets/DESKTOP/desktop-nodejs.png";
 import expressImg from "@/assets/DESKTOP/desktop-expressjs.png";
 import tailwindImg from "@/assets/DESKTOP/desktop-tailwindcss.png";
-import mongoDbImg from "@/assets/DESKTOP/desktop-mongodb 1.png";
+import mongoDbImg from "@/assets/DESKTOP/desktop-mongodb-1.png";
 import postgresImg from "@/assets/DESKTOP/desktop-postgresql.png";
 import prismaImg from "@/assets/DESKTOP/desktop-prisma.png";
 import figmaImg from "@/assets/DESKTOP/desktop-figma.png";

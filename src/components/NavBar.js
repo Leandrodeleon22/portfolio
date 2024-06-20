@@ -2,7 +2,7 @@
 import React from "react";
 
 import Image from "next/image";
-import Logo from "@/assets/DESKTOP/desktop-logo-01 1.png";
+import Logo from "@/assets/DESKTOP/desktop-logo-01-1.png";
 import Link from "next/link";
 import Hamburger from "./Hamburger";
 import { useStore } from "@/lib/store";

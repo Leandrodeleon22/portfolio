@@ -1,12 +1,12 @@
 import React from "react";
 import Wrapper from "./Wrapper";
 import Link from "next/link";
-import countryFlag from "@/assets/DESKTOP/desktop-country-mockup 1.png";
-import calculatorTip from "@/assets/DESKTOP/desktop-calculator-tip-mockup 1.png";
-import multiStepForm from "@/assets/DESKTOP/desktop-multi-step-form-mockup 1.png";
-import rockPaperScissors from "@/assets/DESKTOP/desktop-rock-paper-scissors 1.png";
-import todo from "@/assets/DESKTOP/desktop-todo-app 1.png";
-import graphicDesigns from "@/assets/DESKTOP/desktop-graphic-designs 1.png";
+import countryFlag from "@/assets/DESKTOP/desktop-country-mockup-1.png";
+import calculatorTip from "@/assets/DESKTOP/desktop-calculator-tip-mockup-1.png";
+import multiStepForm from "@/assets/DESKTOP/desktop-multi-step-form-mockup-1.png";
+import rockPaperScissors from "@/assets/DESKTOP/desktop-rock-paper-scissors-1.png";
+import todo from "@/assets/DESKTOP/desktop-todo-app-1.png";
+import graphicDesigns from "@/assets/DESKTOP/desktop-graphic-designs-1.png";
 import Image from "next/image";
 
 const projects = [

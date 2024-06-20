@@ -1,6 +1,6 @@
 import Image from "next/image";
 import NavBar from "./NavBar";
-import bgImage from "@/assets/DESKTOP/desktop-bg-portfolio 1.png";
+
 import Wrapper from "./Wrapper";
 import MobileNavBar from "./MobileNavBar";
 
