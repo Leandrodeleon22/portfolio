@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import linkedInImg from "@/assets/DESKTOP/desktop-linkedin.png";
-import githubImg from "@/assets/DESKTOP/desktop-github.png";
+import linkedInImg from "@/assets/desktop/desktop-linkedin.png";
+import githubImg from "@/assets/desktop/desktop-github.png";
 import Link from "next/link";
 
 const Footer = () => {
