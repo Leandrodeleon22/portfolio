@@ -73,7 +73,7 @@ export default function Dialog() {
           initial={{ opacity: 0, y: "-10%" }}
           animate={{ opacity: 1, y: "5%" }}
           transition={{ delay: 0.2 }}
-          exit={{ opacity: 0 }}
+          exit={{ opacity: 0, y: "-50%" }}
           ref={dialogRef}
           className="fixed top-50 left-50 -translate-x-50 -translate-y-50 z-10  rounded-xl backdrop:bg-gray-800/50 overflow-visible"
         >

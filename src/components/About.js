@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+import React, { useRef } from "react";
+import { inView, motion, useInView } from "framer-motion";
 import Wrapper from "./Wrapper";
 import javascriptImg from "@/assets/desktop/desktop-js.png";
 import nextImg from "@/assets/desktop/desktop-nextjs.png";
@@ -30,27 +32,73 @@ const icons = [
 ];
 
 const About = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+
+  const containerVariants = {
+    hidden: { opacity: 1 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: inView ? 1 : 0, y: 0 },
+  };
+
   return (
     <Wrapper>
-      <section className="mt-[10rem] font-extralight pt-[7rem]" id="about">
-        <h1 className="text-[4.2rem]  text-[var(--neon-green-color)] max-[630px]:text-center ">
+      <motion.section
+        className="mt-[10rem] font-extralight pt-[7rem]"
+        id="about"
+      >
+        <motion.h1
+          ref={ref}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: isInView ? 1 : 0 }}
+          // variants={containerVariants}
+          className="text-[4.2rem]  text-[var(--neon-green-color)] max-[630px]:text-center "
+        >
           About Me
-        </h1>
-        <p className="text-[2.4rem] leading-[3.5rem] w-11/12 mt-[2.5rem] max-[630px]:text-center max-[500px]:text-[2rem] max-[500px]:leading-[3.5rem]">
+        </motion.h1>
+        <motion.p
+          ref={ref}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: isInView ? 1 : 0 }}
+          className="text-[2.4rem] leading-[3.5rem] w-11/12 mt-[2.5rem] max-[630px]:text-center max-[500px]:text-[2rem] max-[500px]:leading-[3.5rem]"
+        >
           Hi! I’m a Web Developer with professional experience in graphic
           design. I enjoy combining my skills in problem solving and design to
           create different types of web apps. I also have experience in backend
           development, relational database and non-relational database.
-        </p>
-        <h2 className="font-extralight text-[2.3rem] italic my-[3rem] max-[630px]:text-center ">
+        </motion.p>
+        <motion.h2
+          ref={ref}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: isInView ? 1 : 0 }}
+          className="font-extralight text-[2.3rem] italic my-[3rem] max-[630px]:text-center "
+        >
           Core toolkit that I use:
-        </h2>
-        <div className=" grid grid-cols-6 gap-y-[4rem] mt-[6rem] justify-items-center mb-[10rem] max-[630px]:grid-cols-3 max-[630px]:gap-5">
+        </motion.h2>
+
+        <motion.div
+          ref={ref}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          variants={containerVariants}
+          className=" grid grid-cols-6 gap-y-[4rem] mt-[6rem] justify-items-center mb-[10rem] max-[630px]:grid-cols-3 max-[630px]:gap-5"
+        >
           {icons.map((icon) => {
             return (
-              <div
+              <motion.div
                 key={icon.id}
+                // ref={ref}
                 className="flex flex-col items-center text-[1.9rem] text-[var(--neon-green-color)]"
+                variants={itemVariants}
               >
                 <Image
                   src={icon.icon}
@@ -61,11 +109,11 @@ const About = () => {
                 />
 
                 <span className="max-[500px]:text-[1.3rem]">{icon.name}</span>
-              </div>
+              </motion.div>
             );
           })}
-        </div>
-      </section>
+        </motion.div>
+      </motion.section>
     </Wrapper>
   );
 };
