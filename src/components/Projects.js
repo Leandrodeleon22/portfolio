@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useRef } from "react";
 import Wrapper from "./Wrapper";
 import Link from "next/link";
 import countryFlag from "@/assets/desktop/desktop-country-mockup-1.png";
@@ -8,6 +10,7 @@ import rockPaperScissors from "@/assets/desktop/desktop-rock-paper-scissors-1.pn
 import todo from "@/assets/desktop/desktop-todo-app-1.png";
 import graphicDesigns from "@/assets/desktop/desktop-graphic-designs-1.png";
 import Image from "next/image";
+import { motion, useInView, inView } from "framer-motion";
 
 const projects = [
   {
@@ -62,46 +65,78 @@ const projects = [
 ];
 
 const Projects = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.4,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: inView ? 1 : 0, y: 0 },
+  };
+
   return (
     <Wrapper>
-      <section id="projects" className="font-extralight pt-[7rem]">
-        <h1 className="text-[4.2rem]  text-[var(--neon-green-color)] max-[500px]:text-center">
+      <motion.section
+        ref={ref}
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        variants={containerVariants}
+        id="projects"
+        className="font-extralight pt-[7rem] mt-[100px]"
+      >
+        <motion.h1
+          ref={ref}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: isInView ? 1 : 0 }}
+          className="text-[4.2rem]  text-[var(--neon-green-color)] max-[500px]:text-center"
+        >
           Projects
-        </h1>
+        </motion.h1>
         <div className="grid grid-cols-3 justify-items-center item gap-9 my-[2.5rem] max-[830px]:grid-cols-1">
           {projects.map((project) => {
             return (
-              <Link
-                href={project.link}
-                className="flex flex-col py-[5rem] justify-between bg-gradient-to-t from-[var(--neon-green-border)] to-[var(--top-gradient)] to-60% items-center p-8 border-solid border-[var(--neon-green-color)] border-[.15rem] w-full rounded-2xl hover:drop-shadow-[0_10px_20px_rgba(6,66,12,1)] hover:scale-[1.02] transition hover:ease-in"
-                key={project.id}
-                target="_blank"
-              >
-                <Image
-                  src={project.image}
-                  height={177}
-                  width={281}
-                  alt={project.name}
-                />
-                <h1 className="text-[2.5rem] font-normal my-3 text-center">
-                  {project.name}
-                </h1>
-                <p className="font-normal text-[1.6rem] text-center ">
-                  {project.description}
-                </p>
-                <button className="bg-[#1ED430] w-3/4 h-[5rem] rounded-2xl text-[2.5rem] font-normal my-8 hover:bg-[#26B634]">
-                  View Live
-                </button>
-                <div className="flex w-full justify-around px-2 italic font-normal text-[1.4rem] flex-wrap">
-                  {project.tools.map((tool) => {
-                    return <span key={tool}>{tool}</span>;
-                  })}
-                </div>
-              </Link>
+              <motion.div variants={itemVariants} key={project.id}>
+                <Link
+                  href={project.link}
+                  className="flex flex-col py-[5rem] justify-between bg-gradient-to-t from-[var(--neon-green-border)] to-[var(--top-gradient)] to-60% items-center p-8 border-solid border-[var(--neon-green-color)] border-[.15rem] w-full rounded-2xl hover:drop-shadow-[0_10px_20px_rgba(6,66,12,1)] hover:scale-[1.02] transition hover:ease-in"
+                  key={project.id}
+                  target="_blank"
+                >
+                  <Image
+                    src={project.image}
+                    height={177}
+                    width={281}
+                    alt={project.name}
+                  />
+                  <h1 className="text-[2.5rem] font-normal my-3 text-center">
+                    {project.name}
+                  </h1>
+                  <p className="font-normal text-[1.6rem] text-center ">
+                    {project.description}
+                  </p>
+                  <button className="bg-[#1ED430] w-3/4 h-[5rem] rounded-2xl text-[2.5rem] font-normal my-8 hover:bg-[#26B634]">
+                    View Live
+                  </button>
+                  <div className="flex w-full justify-around px-2 italic font-normal text-[1.4rem] flex-wrap">
+                    {project.tools.map((tool) => {
+                      return <span key={tool}>{tool}</span>;
+                    })}
+                  </div>
+                </Link>
+              </motion.div>
             );
           })}
         </div>
-      </section>
+      </motion.section>
     </Wrapper>
   );
 };

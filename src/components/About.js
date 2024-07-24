@@ -36,7 +36,7 @@ const About = () => {
   const isInView = useInView(ref);
 
   const containerVariants = {
-    hidden: { opacity: 1 },
+    hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
@@ -47,13 +47,13 @@ const About = () => {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
-    visible: { opacity: inView ? 1 : 0, y: 0 },
+    visible: { opacity: isInView ? 1 : 0, y: 0 },
   };
 
   return (
     <Wrapper>
       <motion.section
-        className="mt-[10rem] font-extralight pt-[7rem]"
+        className="mt-[10rem] font-extralight pt-[7rem] "
         id="about"
       >
         <motion.h1
