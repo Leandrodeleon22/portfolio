@@ -20,7 +20,7 @@ const Header = () => {
         <div className=" text-[9.9rem] font-extralight" id="home">
           <div className="min-h-screen flex items-center max-[630px]:justify-center ">
             <div className=" text-[9.9rem] font-extralight max-[630px]:text-center">
-              <p className=" m-0 max-[832px]:text-[7rem] max-[630px]:text-[5.5rem] max-[500px]:text-[3.5rem] ">
+              <p className=" max-w-[100rem] m-0 max-[832px]:text-[7rem] max-[630px]:text-[5.5rem] max-[500px]:text-[3.5rem] ">
                 {text}
                 <Cursor />
               </p>
